@@ -64,7 +64,7 @@ let time = "12:00:00am";
 
 (function changeTime(time){
     let newTime = "00"
-    if( time[0] === "1" && time[1]=== "2" && time[8] === "a"){
+    if(time[0] === "1" && time[1]=== "2" && time[8] === "a"){
             for(let i = 2; i < time.length-2 ; i++){
                 newTime += time[i];
             }
