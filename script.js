@@ -60,15 +60,31 @@
 
 ///  convert 12hours to 24 hours time
 
-let time = "12:00:00am";
+// let time = "12:00:00am";
 
-(function changeTime(time){
-    let newTime = "00"
-    if(time[0] === "1" && time[1]=== "2" && time[8] === "a"){
-            for(let i = 2; i < time.length-2 ; i++){
-                newTime += time[i];
-            }
+// (function changeTime(time){
+//     let newTime = "00"
+//     if(time[0] === "1" && time[1]=== "2" && time[8] === "a"){
+//             for(let i = 2; i < time.length-2 ; i++){
+//                 newTime += time[i];
+//             }
         
+//     }
+//     console.log(newTime) ;
+// })(time);
+
+const nums =[2,7,11,15]
+const target =9
+
+
+const memory = {}
+let other;
+for(let i=0;i<=nums.length;i++){
+    other = target - nums[i]
+    if(memory[other] !== undefined){
+        return console.log([memory[other],i]);
+        
+    }else{
+        memory[nums[i]]=i
     }
-    console.log(newTime) ;
-})(time);
+}

@@ -1,0 +1,20 @@
+{
+  "name": "javascript-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojo114/javascript-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jojo114/javascript-exercise/issues"
+  },
+  "homepage": "https://github.com/jojo114/javascript-exercise#readme"
+}
