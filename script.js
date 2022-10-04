@@ -73,18 +73,65 @@
 //     console.log(newTime) ;
 // })(time);
 
-const nums =[2,7,11,15]
-const target =9
+// const nums =[2,7,11,15]
+// const target =9
 
 
-const memory = {}
-let other;
-for(let i=0;i<=nums.length;i++){
-    other = target - nums[i]
-    if(memory[other] !== undefined){
-        return console.log([memory[other],i]);
+// const memory = {}
+// let other;
+// for(let i=0;i<=nums.length;i++){
+//     other = target - nums[i]
+//     if(memory[other] !== undefined){
+//         return console.log([memory[other],i]);
         
+//     }else{
+//         memory[nums[i]]=i
+//     }
+// }
+
+const list = [0,1,2,3,4,5,6,7,8,9,10]
+const target = 3
+// function linear_search(list,target){
+
+//     for(let i = 0;i<=list.length;i++){
+//         if(list[i]=== target){
+//             return i
+//         }
+//     }
+
+//     return "none"
+// }
+
+// const index = linear_search(list,target)
+
+
+function binary_search(list,target){
+    let first = 0
+    let last = list.length -1
+    let midpoint ;
+        while(first < last){
+            midpoint = Math.floor((first + last) /2)
+            if(list[midpoint] === target){
+                return midpoint
+            }else if(list[midpoint] < target){
+                first = midpoint + 1
+            }else{
+                last = midpoint - 1
+            }
+        }
+
+        return "none"
+}
+
+
+const index = binary_search(list,target)
+
+function verify(index){
+    if(index !== 'none'){
+        console.log('target found at index:',index);
     }else{
-        memory[nums[i]]=i
+        console.log('target not found');
     }
 }
+
+verify(index)
