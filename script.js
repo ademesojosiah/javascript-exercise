@@ -1,4 +1,4 @@
-
+const recursive_binary = require('./recursive_binary')
 /// Get the sum of minimium and maximium values in an array
 
 
@@ -90,7 +90,7 @@
 // }
 
 const list = [0,1,2,3,4,5,6,7,8,9,10]
-const target = 3
+const target = 90
 // function linear_search(list,target){
 
 //     for(let i = 0;i<=list.length;i++){
@@ -105,33 +105,40 @@ const target = 3
 // const index = linear_search(list,target)
 
 
-function binary_search(list,target){
-    let first = 0
-    let last = list.length -1
-    let midpoint ;
-        while(first < last){
-            midpoint = Math.floor((first + last) /2)
-            if(list[midpoint] === target){
-                return midpoint
-            }else if(list[midpoint] < target){
-                first = midpoint + 1
-            }else{
-                last = midpoint - 1
-            }
-        }
+// function binary_search(list,target){
+//     let first = 0
+//     let last = list.length -1
+//     let midpoint ;
+//         while(first < last){
+//             midpoint = Math.floor((first + last) /2)
+//             if(list[midpoint] === target){
+//                 return midpoint
+//             }else if(list[midpoint] < target){
+//                 first = midpoint + 1
+//             }else{
+//                 last = midpoint - 1
+//             }
+//         }
 
-        return "none"
+//         return "none"
+// }
+
+
+// const index = binary_search(list,target)
+
+// function verify(index){
+//     if(index !== 'none'){
+//         console.log('target found at index:',index);
+//     }else{
+//         console.log('target not found');
+//     }
+// }
+
+// verify(index)
+const result = recursive_binary(list,7)
+
+function verify(result){
+console.log('target found', result);
 }
 
-
-const index = binary_search(list,target)
-
-function verify(index){
-    if(index !== 'none'){
-        console.log('target found at index:',index);
-    }else{
-        console.log('target not found');
-    }
-}
-
-verify(index)
+verify(result)
