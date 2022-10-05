@@ -89,8 +89,7 @@ const recursive_binary = require('./recursive_binary')
 //     }
 // }
 
-const list = [0,1,2,3,4,5,6,7,8,9,10]
-const target = 90
+
 // function linear_search(list,target){
 
 //     for(let i = 0;i<=list.length;i++){
@@ -135,7 +134,10 @@ const target = 90
 // }
 
 // verify(index)
-const result = recursive_binary(list,7)
+
+const list = [0,1,2,3,4,5,6,7,8,9,10]
+
+const result = recursive_binary(list,8)
 
 function verify(result){
 console.log('target found', result);
