@@ -50,14 +50,34 @@ class LinkedList{
 }
 
 
-let list = new LinkedList()
+// let list = new LinkedList()
 
-list.append('a')
-list.append('b')
-list.append(8)
-list.append(9)
-list.append('j5')
-console.log(list.head);
-console.log(list.contains('j5'));
+// list.append('a')
+// list.append('b')
+// list.append(8)
+// list.append(9)
+// list.append('j5')
+// console.log(list.head);
+// console.log(list.contains('j5'));
 
-list.print()
+// list.print()
+
+
+
+function recurse_bin(list,target){
+    if(list.length === 0){
+        return false
+    }
+    let midpoint = Math.floor((list.length)/2)
+    if(list[midpoint] === target){
+        return true
+    }else if(target > list[midpoint]){
+        return recurse_bin(list.slice((midpoint+1)),target)
+    }else{
+        return recurse_bin(list.slice(0,(midpoint-1)),target)
+    }
+}
+
+
+let list = [0,1,2,3,4,5,6,7,8,9,10]
+console.log(recurse_bin(list,7))
