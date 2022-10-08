@@ -5,12 +5,10 @@ class Node{
     }
 }
 
-
 class LinkedList{
     constructor(){
         this.head = null
     }
-
 
 
     append(val){
@@ -23,11 +21,12 @@ class LinkedList{
             }
             curr.next = new Node(val)
         }
+
     }
 
     print(){
-        let str = ''
         let curr = this.head
+        let str = ''
         while(curr !== null){
             str += `${curr.val} ->`
             curr = curr.next
@@ -35,6 +34,17 @@ class LinkedList{
         console.log(str);
     }
 
+
+    contains(val){
+        let curr = this.head
+        while(curr !== null){
+            if(curr.val === val){
+                return true
+            }
+            curr = curr.next
+        }
+        return false
+    }
 
 
 }
@@ -47,5 +57,7 @@ list.append('b')
 list.append(8)
 list.append(9)
 list.append('j5')
+console.log(list.head);
+console.log(list.contains('j5'));
 
 list.print()
