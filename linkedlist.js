@@ -72,9 +72,9 @@ function recurse_bin(list,target){
     if(list[midpoint] === target){
         return true
     }else if(target > list[midpoint]){
-        return recurse_bin(list.slice((midpoint+1)),target)
+        return recurse_bin(list.slice((midpoint)),target)
     }else{
-        return recurse_bin(list.slice(0,(midpoint-1)),target)
+        return recurse_bin(list.slice(0,(midpoint)),target)
     }
 }
 
