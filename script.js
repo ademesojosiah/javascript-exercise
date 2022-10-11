@@ -1,4 +1,4 @@
-const recursive_binary = require('./recursive_binary')
+
 /// Get the sum of minimium and maximium values in an array
 
 
@@ -135,12 +135,24 @@ const recursive_binary = require('./recursive_binary')
 
 // verify(index)
 
-const list = [0,1,2,3,4,5,6,7,8,9,10]
+// const list = [0,1,2,3,4,5,6,7,8,9,10]
 
-const result = recursive_binary(list,8)
+// const result = recursive_binary(list,8)
+// const result1 = binary_search(list,8)
 
-function verify(result){
-console.log('target found', result);
-}
+// function verify(result){
+// console.log('target found', result);
+// }
 
-verify(result)
+// verify(result)
+// verify()
+
+const romanToInt = require('./romanFigures')
+
+const roman = romanToInt("IX")
+
+// function verify(result){
+//     console.log('target found', result);
+//     }
+
+// verify(roman)
