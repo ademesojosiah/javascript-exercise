@@ -104,37 +104,49 @@ class LinkedList{
         return (curr.val  + '->' + this._print(curr.next))
     }
 
+    contain(val){
+        const body = this._contain(val,this.head)
+        console.log(body);
+
+    }
+
+    _contain(val,curr){
+        if(curr === null) return false
+        if(curr.val === val) return true
+        return this._contain(val,curr.next) 
+    }
+
 
 }
 
-// const list = new LinkedList()
-
-// list.append('a')
-// list.append('b')
-// list.append(8)
-// list.append(9)
-// list.append('j5')
-// console.log(list.head);
-// list.print()
+const list = new LinkedList()
 
 
-function recursive_loop(list){
-    if(list.length === 0){
-        return console.log('empty array');
-    }
-    function doDO(list,curr){
-        if(list[curr] === undefined) return '' //base case
-        console.log(list[curr])
-        curr += 1
-        return doDO(list,curr)
-    }
-    let curr = 0
-    doDO(list,curr);
 
+list.append(11)
+list.append(7)
+list.append(10)
+list.append(2)
+
+// function sumList(head){
+//     let sum = 0
+//     let curr = head
+//     while(curr !== null ){
+//         sum += curr.val
+//         curr = curr.next
+//     }
+//     return sum  
+// }
+
+
+const sumList = (curr)=>{
+    if(curr === null) return 0;
+    return curr.val + sumList(curr.next)
 }
+console.log(sumList(list.head))
 
-const arr = [1,2,3,4,5,6,7,8,9,"j5",'jojo']
-recursive_loop(arr)
+
+//  
 
 
 
