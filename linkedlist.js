@@ -123,10 +123,10 @@ const list = new LinkedList()
 
 
 
-list.append(11)
-list.append(7)
-list.append(10)
-list.append(2)
+list.append('a')
+list.append('b')
+list.append('c')
+list.append('d')
 
 // function sumList(head){
 //     let sum = 0
@@ -139,14 +139,81 @@ list.append(2)
 // }
 
 
-const sumList = (curr)=>{
-    if(curr === null) return 0;
-    return curr.val + sumList(curr.next)
+// const sumList = (curr)=>{
+//     if(curr === null) return 0;
+//     return curr.val + sumList(curr.next)
+// }
+// console.log(sumList(list.head))
+
+// const deleteNode = (head,target)=>{
+//     let prev = null;
+//     let curr = head;
+//     while(curr != null){
+//         if(curr.val === target){
+//             prev.next = curr.next
+//             return head
+//         }
+//         prev = curr
+//         curr = curr.next
+//     }
+//     return head
+// }
+
+const a = new Node('a')
+const b = new Node('b')
+const c = new Node('c')
+const d = new Node('d')
+
+a.next = b
+b.next = c
+c.next = d
+
+
+console.log(a)
+
+const print = (head)=>{
+    if(head === null) return ''
+    console.log(head.val);
+    return print(head.next)
 }
-console.log(sumList(list.head))
 
 
-//  
+// recursively
+// const deleteNode = (head,target) =>{
+//     let prev = null
+//     let curr = head
+//     function _deleteNode(curr,prev,target){
+//         if(curr === null)return 
+//         if(curr.val === target){
+//             curr = curr.next
+//             return curr
+//         }
+//         if(curr.val === target){
+//         prev.next = curr.next
+//         return curr
+//         }
+//            prev = curr
+//             curr = curr.next
+//         return _deleteNode(curr,prev,target)} 
+//         return _deleteNode(curr,prev,target)
+// }
+
+// const newHead = deleteNode(a,'n')
+// const newHead1 = deleteNode(a,'a')
+
+
+// console.log(newHead,newHead1);
+//  print(newHead1)
+
+//
+function reverseLinked(a){
+    const memory = {}
+
+    while( curr !== null){
+        curr = curr.next
+    }
+
+}
 
 
 

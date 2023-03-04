@@ -147,12 +147,37 @@
 // verify(result)
 // verify()
 
-const romanToInt = require('./romanFigures')
+// const romanToInt = require('./romanFigures')
 
-const roman = romanToInt("IX")
+// const roman = romanToInt("IX")
 
 // function verify(result){
 //     console.log('target found', result);
 //     }
 
 // verify(roman)
+
+// var removeDuplicates = function(nums) {
+//     let i = 1
+//     for(let j = 1;j<=nums.length-1;j++){
+//         if(nums[j]!=nums[j-1]){
+//           nums[i] = nums[j]
+//            i++
+//         }
+//     }
+//     return i
+//     };
+
+
+
+var missingNumber = function(nums) {
+    const sortedNums = nums.sort((a,b)=> a-b)
+    for(let i =0; i<= sortedNums.length;i++){
+        if(i != sortedNums[i]){
+            return i
+        }
+    }
+};
+
+// console.log("1st",removeDuplicates([1,1,2]))
+console.log("2nd",missingNumber([45,35,38,13,12,23,48,15,44,21,43,26,6,37,1,19,22,3,11,32,4,16,28,49,29,36,33,8,9,39,46,17,41,7,2,5,27,20,40,34,30,25,47,0,31,42,24,10,14]))

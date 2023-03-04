@@ -42,4 +42,3 @@ console.log('target found', result);
 
 verify(result)
 verify(result1)
-
